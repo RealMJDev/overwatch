@@ -38,11 +38,11 @@
 
 
 
-$(document).ready(function(){
-    $('.hero-images-container').slick({
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: (3000),
-        arrows: false,
-    });
-  });
+// $(document).ready(function(){
+//     $('.hero-images-container').slick({
+//         infinite: true,
+//         autoplay: true,
+//         autoplaySpeed: (3000),
+//         arrows: false,
+//     });
+//   });
