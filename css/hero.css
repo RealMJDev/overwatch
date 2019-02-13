@@ -1,27 +1,23 @@
 @media all and (min-width:210px){
 
-    .hero-container {
-        height: 300px;
-    }
-    .hero-images-container {
+.hero-images-container {
     position: relative;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 350px;
     display: flex;
+    background: red;
 }
-
-
-/* .hero-slider img {
+.hero-images-container img {
+    width: auto;
+    height: auto;
     min-width: 100%;
     min-height: 100%;
     object-fit: cover;
-    object-position: top center;
-} */
+}
 
 .slider-heading {
     position: absolute;
-    top: 0%;
+    top: 420px;
     right: 25px;
     text-align: right;
     z-index: 0;
@@ -34,7 +30,7 @@
     text-align: right;
     margin: 0;
     line-height: 40px;
-    /* mix-blend-mode: multiply; */  /* Toggle with media queries */
+    text-shadow: 0px 0px 3px black;
 }
 
 .slider-description-box {
@@ -86,7 +82,23 @@
 }
 
 
+@media all and (min-width:500px){
 
+    .slider-heading {
+        position: absolute;
+        top: 380px;
+        right: 6%;
+        text-align: right;
+        z-index: 0;
+    }
+    
+    .slider-heading h1 {
+        font-size: 350%;
+        line-height: 60px;
+        text-shadow: 0px 0px 1px black;
+    }
+
+}
 
 
 
@@ -97,16 +109,17 @@
         background: #000;
         height: 390px;
     }
-    .hero-container {
-        height: 400px;
-    }
+
     .hero-images-container {
         width: 100%;
+        height: 390px;
+        object-fit: cover;
+        display: flex;
     }
     
     .slider-heading {
         position: absolute;
-        top: 350px;
+        top: 240px;
         right: 25px;
         z-index: 1;
         text-align: right;
@@ -127,7 +140,7 @@
     .slider-description-box {
         position: absolute;
         top: 390px;
-        left: 20px;
+        left: 25px;
         width: 55%;
         height: 200px;
         background: rgba(51, 56, 52, .85);
@@ -170,17 +183,18 @@
 
     @media all and (min-width:850px){
 
-        .hero-container {
-            height: 400px;
-        }
         .hero-images-container {
-            height: 100%;
+            height: 550px;
         }
-        .hero-images-container img {
-            object-fit: cover;
-        }
-    
 
+        .slider-heading {
+            position: absolute;
+            top: 200px;
+            right: 25px;
+            z-index: 1;
+            text-align: right;
+            z-index: 0;
+        }
         .slider-heading h1 {
             font-size: 4em;
             line-height: 60px;
@@ -188,7 +202,7 @@
 
         .slider-description-box {
             animation: bounce-left 1.2s both;
-            top: 350px;
+            top: 500px;
             width: 50%;
         }
         
@@ -239,17 +253,18 @@
 
     @media all and (min-width:1024px) {
 
-        .hero-container {
-            height: 500px;
-        }
-
         .slider-description-box {
-            top: 350px;
+            top: 490px;
+            width: 45%;
         }
 
+        .slider-heading {
+            position: absolute;
+            right: 30px;
+        }
         .slider-heading h1 {
-            font-size: 5em;
-            line-height: 70px;
+            font-size: 6em;
+            line-height: 90px;
         }
     }
 
