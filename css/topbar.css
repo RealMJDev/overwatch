@@ -1,0 +1,40 @@
+/* MOBILE FIRST DESIGN */
+@media all and (min-width:210px){
+    /* The main element 'topbar' */
+    .topbar {
+        position: relative;
+        top: 0;
+        z-index: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        background: #4D4D4D;
+    }
+
+    .topbar-item {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        color: white;
+        padding: 10px;
+        font-size: 1em;
+    }
+    .topbar-item:hover {
+        background: #C7731E;
+    }
+    .cart{
+        background: #C7731E;
+    }
+
+    .topbar-item img {
+        padding-right: 5px;
+        width: 1.2em;
+    }
+}
+
+
+
+
+/* LARGER MEDIA QUERIES */
