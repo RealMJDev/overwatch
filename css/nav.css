@@ -5,16 +5,11 @@
     .nav {
         position: relative;
         width: 100%;
-        /* border-bottom: 4px solid #D46F1E; */
-        /* top: 50px; */
         z-index: 1;
         width: 100%;
-        height: 170px; /* Shrink down to 60px when scrolling - (then hero and dropdowns position) */
-        /* shrink height down to 120px on medium screen size 768px */
+        height: 170px;
         background: #333834;
-        /* border-bottom: 4px solid #C7731E; */  /* Activate this on medium screen size 768px*/
         display: flex;
-        /* Change the following to ROW - space between on medium screen size */
         flex-direction: column;  
         justify-content: end;
         align-items: center;
@@ -22,13 +17,12 @@
 
     .logo {
         position: relative;
-        width: 80%; /* resize on medium screen size */
-        height: 120px; /* resize on medium screen size */
+        width: 80%;
+        height: 120px;
         background: url(/images/logo/overwatch.svg);
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
-        /* background-color: red; */
     }
 
     .menu-toggle {
@@ -74,7 +68,7 @@
         font-weight: 600;
     }
 
-    /* Toggle between classes with JS */
+    
     /* CLOSED CLASS */
     .sub-menu {
         padding: 0;
@@ -105,14 +99,10 @@
         text-transform: uppercase;
         font-weight: 600;
     }
-
-
-
-
-
-
 /* end of mobile media query */
 }
+
+
 
 
 /* 850px */
@@ -128,9 +118,9 @@
     }
 
     .logo {
-        margin-right: 0 auto;
+        margin-right: 5px;
         position: relative;
-        width: 20%; /* resize on medium screen size */
+        width: 20%;
     }
 
     .menu-toggle {
@@ -145,24 +135,26 @@
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-        align-items: flex-start;
+        align-items: flex-end;
         width: 70%;
         height: 100%;
         visibility: visible;
     }
+    
 
     .main-menu-item {
         height: 100%;
         color: #c7c7c7;
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
+        /*  */
         align-items: center;
         text-transform: uppercase;
-        font-weight: 400;
+        font-weight: 600;
         background: none;
         font-size: 0.7em;
         margin: 0;
-        padding-left: 6px;
+        /* padding-left: 6px; */
     }
     
 
@@ -176,7 +168,7 @@
         justify-content: flex-start;
         align-items: flex-start;
         visibility: hidden;
-        z-index: -1000;
+        z-index: -1;
     }
 
     .sub-menu-item {
@@ -197,10 +189,14 @@
     .menu-divs {
         height: 100%;
     }
+    .menu-divs:last-child {
+        text-align: right;
+    }
 
     .menu-divs:hover .sub-menu {
         visibility: visible;
         animation: slideIn 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) ;
+        
     }
     .sub-menu-item:hover {
         background: #c7c7c7;
@@ -227,7 +223,7 @@
     .logo {
         margin-left: 10%;
         position: relative;
-        width: 20%; /* resize on medium screen size */
+        width: 20%;
     }
     
     .menu {
