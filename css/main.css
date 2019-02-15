@@ -1,177 +1,200 @@
 /* 210px */
-@media all and (min-width:210px){
-
-.main-h2-div {
+@media all and (min-width: 210px) {
+  .main-h2-div {
     position: relative;
-    color: #5A5A5A;
+    color: #5a5a5a;
     padding: 50px 0 50px 0;
     display: flex;
     justify-content: center;
-}
-.main-h2-div h2 {
+  }
+  .main-h2-div h2 {
     margin: 0;
-}
+  }
 
-/* The container that contains the product boxes */
-.container {
+  /* The container that contains the product boxes */
+  .container {
     position: relative;
     width: 100%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-}
+  }
 
-.product-box {
+  .product-box {
     width: calc((100% - 1em) / 1); /* Toggle with media queries */
     margin-bottom: 10px;
-}
+  }
 
-.image-box {
+  .image-box {
     position: relative;
     width: 100%;
     background: #e8e8e8;
     padding-bottom: 100%;
     height: 0;
-}
-.image-box::after {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    background: #D56F16;
-    opacity: 0.7;
-    visibility: hidden;
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-.image-box:hover::after {
-    visibility: visible;
-}
+    align-items: flex-start;
+  }
+  .view-pack-link {
+    margin-top: 47%;
+    color: white;
+    border: 2px solid white;
+    padding: 8px;
+    z-index: 1;
+    background: none;
+    display: none;
+    outline: none;
+    animation: btn-anim 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  .image-box:hover .view-pack-link {
+    display: block;
+  }
 
-.image-box img {
- position: absolute;
- top: 50%;
- left: 50%;
- transform: translateX(-50%) translateY(-50%);
- width: 80%;
- mix-blend-mode: darken;
-}
+  .image-box:hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #b57620;
+    animation: scale-in-center 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
 
-.box-desc {
-    color: #5A5A5A;
-    font-size: 1em 600;
-    margin-bottom: 30px;
-}
-
-.box-price {
-    color: #D56F16;
-    font-weight: 600;
-    font-size: 1.2em;
-}
-
-
-}
-
-
-
-/* 500px */
-@media all and (min-width:500px) {
-
-    .product-box {
-        width: calc((100% - 2em) / 2); /* Toggle with media queries */
-        margin-bottom: 10px;
-    }
-}
-
-
-
-/* 768px */
-@media all and (min-width:768px) {
-
-    .container {
-        margin: 0 auto;
-        width: 90%;
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-
-    .product-box {
-        width: calc((100% - 2em) / 3); /* Toggle with media queries */
-        margin-bottom: 10px;
-    }
-
-
-    /* Main heading before and after pseudo elements */  /* Toggle with media queries */
-    .main-h2-div h2::before {
-        position: absolute;
-        left: 0;
-        top: 50%;
-        width: 35%;
-        content: "";
-        height: 1px;
-        background: linear-gradient(90deg, 
-        #ff0000, 
-        #ff9900, 
-        #eeff00, 
-        #00ff2a, 
-        #1100ff, 
-        #d700f3, 
-        #f3003d);
-        background-size: 400%;
-        animation: animate 5s linear infinite;
-        border-radius: 50%;
-    }
-    .main-h2-div h2::after {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        width: 35%;
-        content: "";
-        height: 1px;
-        background: linear-gradient(90deg, 
-        #ff0000, 
-        #ff9900, 
-        #eeff00, 
-        #00ff2a, 
-        #1100ff, 
-        #d700f3, 
-        #f3003d);
-        background-size: 400%;
-        animation: animate 5s linear infinite reverse;
-        border-radius: 50%;
-    }
-
-
-}
-
-
-@media all and (min-width:1024px) {
-    .container {
-        width: 80%;
-    }
-
-    .product-box {
-        width: calc((100% - 3em) / 4); /* Toggle with media queries */
-        margin-bottom: 10px;
-    }
-
-    .main-h2-div h2::before {
-        width: 40%;
-    }
-    .main-h2-div h2::after {
-        width: 40%;
-    }
-}
-
-@keyframes animate {
+  /* KEYFRAME PRODUCT BOX ANIMATION */
+  @keyframes scale-in-center {
     0% {
-      background-position: 0%;
+      transform: scale(0);
+      opacity: 1;
     }
     100% {
-      background-position: 400%;
+      transform: scale(1);
+      opacity: 0.9;
+    }
+  }
+  /* KEYFRAMES VIEW PRODUCT BUTTON */
+  @keyframes btn-anim {
+    0% {
+      transform: rotate(-45deg);
+      opacity: 0;
+    }
+    100% {
+      transform: rotate(0);
+      opacity: 1;
     }
   }
 
+  .image-box img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 80%;
+    mix-blend-mode: darken;
+  }
 
+  .box-desc {
+    color: #5a5a5a;
+    font-size: 1em 600;
+    margin-bottom: 30px;
+  }
+
+  .box-price {
+    color: #d56f16;
+    font-weight: 600;
+    font-size: 1.2em;
+  }
+}
+
+/* 500px */
+@media all and (min-width: 500px) {
+  .product-box {
+    width: calc((100% - 2em) / 2); /* Toggle with media queries */
+    margin-bottom: 10px;
+  }
+}
+
+/* 768px */
+@media all and (min-width: 768px) {
+  .container {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .product-box {
+    width: calc((100% - 2em) / 3); /* Toggle with media queries */
+    margin-bottom: 10px;
+  }
+
+  /* Main heading before and after pseudo elements */ /* Toggle with media queries */
+  .main-h2-div h2::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 35%;
+    content: "";
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      #ff0000,
+      #ff9900,
+      #eeff00,
+      #00ff2a,
+      #1100ff,
+      #d700f3,
+      #f3003d
+    );
+    background-size: 400%;
+    animation: animate 5s linear infinite;
+    border-radius: 50%;
+  }
+  .main-h2-div h2::after {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 35%;
+    content: "";
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      #ff0000,
+      #ff9900,
+      #eeff00,
+      #00ff2a,
+      #1100ff,
+      #d700f3,
+      #f3003d
+    );
+    background-size: 400%;
+    animation: animate 5s linear infinite reverse;
+    border-radius: 50%;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .container {
+    width: 80%;
+  }
+
+  .product-box {
+    width: calc((100% - 3em) / 4); /* Toggle with media queries */
+    margin-bottom: 10px;
+  }
+
+  .main-h2-div h2::before {
+    width: 40%;
+  }
+  .main-h2-div h2::after {
+    width: 40%;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
