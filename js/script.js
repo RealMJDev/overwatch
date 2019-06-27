@@ -15,7 +15,7 @@ window.addEventListener('resize', function(){
         }
     });
 
-//Displaying sub menu items on click with a loop
+//Displaying sub menu items on click with the loop
     mainMenuItems.forEach(function(menuItem){
         menuItem.addEventListener('click',function(){
             var x = menuItem.nextElementSibling;
